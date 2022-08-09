@@ -1,46 +1,6 @@
-*{
-        font-family: 'Inter', sans-serif;
-        background-color: rgba(40, 45, 53, 1);
-}
- .reactLogo{
-    width: 28.93px;
-    
-    
-}
-
-.Logo{
-        align-items: center;
-        color: rgba(0, 216, 255, 1);
+nav {
+        height: 70px;
         display: flex;
-        width: 158px;
-        height: 28.93px;
-        margin: 11px;
-        font-size: 22.25px;
-       
-}
-.extraTitle{
-        color: rgba(222, 235, 248, 1);
-        font-weight: 600;
-}
-.navBar{
-        padding: 10px;
-        background-color: rgba(33, 34, 42, 1);
-        display: flex;
-        justify-content: space-between;
-}
-.mainBody{
-        
-        height: 100vh;
-}
-.h1Title{
-        margin: 0%;
-        padding: 40px;
-        color: white;
-}
-.bodyText{
-        color: white;
-}
-.bodyText > li::marker {
-        font-size: 1.5rem;
-        color: aqua;
+        padding: 20px 36px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
 }
