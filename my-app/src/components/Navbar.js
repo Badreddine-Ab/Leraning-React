@@ -1,6 +1,15 @@
+import ReactLogo from "../images/React-icon.svg.png"
+
 function Navbar (){
     return (
-        <h1>Navbar goes here</h1>
+
+    <nav className="navBar" >
+        <div className="Logo">
+        <img src={ReactLogo} className="reactLogo" alt="react logo"/>
+        <p><b>ReactFacts</b></p>
+        </div>
+        <p className="extraTitle">React Course - Project 1</p>
+        </nav>
     )
 }
 
