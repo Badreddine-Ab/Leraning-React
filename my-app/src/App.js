@@ -1,13 +1,21 @@
+import { useState } from "react"
 
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
 
 
 function App(){
+const [count,change]= useState(0)
+  function add(){
+    change(count+1)
+  }
+  function mince(){
+    change(count-1)
+  }
 return (
-  <div className="container">
-  <Navbar/>
-  <Main/>
+  
+  <div>
+   <button onClick={add}>+</button>
+   <h1>{count}</h1>
+   <button onClick={mince}>-</button>
   </div>
 )
 }
