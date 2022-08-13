@@ -3,21 +3,22 @@ import { useState } from "react"
 
 
 function App(){
-const [count,change]= useState(0)
-  function add(){
-    change(count+1)
-  }
-  function mince(){
-    change(count-1)
-  }
+  
+  const [thingsArray,setThingArray] = useState(["thing 1","thing 2"])
+  
+function addItem(){
+  setThingArray(prevState =>{
+    return [...prevState, `Thing ${prevState.length +1}`]
+  } )
+  const thingsElement = thingsArray.map(thing=><p>{thing}</p>)
+  
 return (
   
   <div>
-   <button onClick={add}>+</button>
-   <h1>{count}</h1>
-   <button onClick={mince}>-</button>
+   <button onClick={addItem} >add a thing</button>
+   {thingsElement}
   </div>
 )
 }
-
+}
 export default App
