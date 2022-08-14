@@ -1,24 +1,25 @@
 import { useState } from "react"
-
+import React from "react"
 
 
 function App(){
-  
-  const [thingsArray,setThingArray] = useState(["thing 1","thing 2"])
-  
-function addItem(){
-  setThingArray(prevState =>{
-    return [...prevState, `Thing ${prevState.length +1}`]
-  } )
-  const thingsElement = thingsArray.map(thing=><p>{thing}</p>)
-  
+const [thingsArray,setThingsArray] = useState(["thing 1", "Thing 2"])
+const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+function AddItem(){
+  setThingsArray(prevThingsArray =>{
+
+ return  [...prevThingsArray,`Thing ${prevThingsArray.length + 1}`]})
+}
+
+
+
 return (
   
   <div>
-   <button onClick={addItem} >add a thing</button>
-   {thingsElement}
+   <button onClick={AddItem} >add a thing</button>
+   {thingsElements}
   </div>
 )
 }
-}
+
 export default App
